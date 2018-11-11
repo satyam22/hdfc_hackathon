@@ -71,15 +71,6 @@ export default class Projects extends Component {
           return firstTime - secondTime;
         }
       }
-      // {
-      //   title: 'Industry',
-      //   dataIndex: 'industry',
-      //   key: 'industry',
-      //   width: '150px',
-      //   filters: industries.map(industry => ({ text: industry, value: industry })),
-      //   onFilter: (value, record) => record.industry.includes(value)
-
-      // }
     ]
     return (
       <div className="projects">
@@ -93,6 +84,7 @@ export default class Projects extends Component {
               <Table dataSource={projects}
                 columns={columns}
                 className="projects-table"
+                rowKey = "id"
               />
             )
         }
