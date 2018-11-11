@@ -16,7 +16,7 @@ const Project = (props) => {
     project = project[0];
   else return <h1>Project with specified ID does not exist </h1>;
   const { amountPledged, endTime, percentageFunded, numOfBackers, blurb, by, country, currency,
-    location, state, title, type } = project;
+    title} = project;
   let { url } = project;
   url = `${PREFIX_URL}${url}`;
   return (
@@ -25,6 +25,7 @@ const Project = (props) => {
       <div className = "blurb">{blurb}</div>
       <div className = "author"> By : {by}</div>
       <div className = "country">Country: {country}</div>
+      <div className = "currency">Currency: {currency}</div>
       <div className = "amount-pledged">Amount Pledged: {amountPledged}</div>
       <div className = "per-funded">Percentage Funded: {percentageFunded}</div>
       <div className = "backers">Total number of backers: {numOfBackers}</div>
