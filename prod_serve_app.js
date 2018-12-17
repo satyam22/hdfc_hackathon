@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
-
+const { PORT = 5002 } = require('./config');
 const app = express();
-const PORT = 5002;
 
 app.use(express.static(path.join(__dirname,'build')));
 

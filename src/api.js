@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://starlord.hackerearth.com/kickstarter';
+const { SERVER_PORT, HOST } = require('./config');
+
+const API_BASE_URL = `http://${HOST}:${SERVER_PORT}/starlord.hackerearth.com/kickstarter`;
 
 export const getAllProjects = async (callback) => {
   try {
